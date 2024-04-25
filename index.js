@@ -25,7 +25,7 @@ app.get('/',(req,res) => {
 })
 app.get('/image',(req,res) => {
    console.log(__dirname)
-   res.sendFile(`${__dirname}/assets/book1.jpg`)
+   res.send(`${__dirname}/assets/book1.jpg`)
    // res.status(200).json({Server:"Working..",dirName : __dirname})
 })
 app.use('/api/v1/shoppingCart', shoppingCartRouter)
