@@ -23,6 +23,11 @@ app.get('/',(req,res) => {
    // res.sendFile(__dirname)
    res.status(200).json({Server:"Working..",dirName : __dirname})
 })
+app.get('/image',(req,res) => {
+   console.log(__dirname)
+   res.sendFile(`${__dirname}/book1.jpg`)
+   // res.status(200).json({Server:"Working..",dirName : __dirname})
+})
 app.use('/api/v1/shoppingCart', shoppingCartRouter)
 
 app.listen(PORT, console.log(`Server started running at http://localhost:${PORT}/api/v1/shoppingCart/`))
