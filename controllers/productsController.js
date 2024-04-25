@@ -17,7 +17,7 @@ const getFileByName = (request, response) =>{
     const {filename} = request.params
     const parentDirectory = (__dirname).split('/controllers')[0]
     const filePath = parentDirectory + "/assets/" + filename
-   response.status(200).json({dir:__dirname})
+   response.status(200).json({dir:__dirname,file:filePath})
     response.status(200).sendFile(filePath)
 }
 
