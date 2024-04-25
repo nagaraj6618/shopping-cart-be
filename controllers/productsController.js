@@ -31,7 +31,7 @@ const addNewProduct = async(request, response) => {
         }
         const {filename} = request.file
         
-        const productImagePath = __dirname+`/assets/`+filename
+        const productImagePath = `assets/`+filename
 
         const productData = 
         {
