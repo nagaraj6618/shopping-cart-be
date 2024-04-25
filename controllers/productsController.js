@@ -15,7 +15,7 @@ const getAllProducts = async(request, response) => {
 
 const getFileByName = (request, response) =>{
     const {filename} = request.params
-    const parentDirectory = (__dirname).split('\controllers')[0]
+    const parentDirectory = (__dirname).split('/controllers')[0]
     const filePath = parentDirectory + "/assets/" + filename
    
     response.status(200).sendFile(filePath)
