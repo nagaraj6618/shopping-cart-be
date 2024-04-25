@@ -19,7 +19,9 @@ catch(err){
 app.use(cors())
 app.use(express.json())
 app.get('/',(req,res) => {
-   res.status(200).json({Server:"Working.."})
+   console.log(__dirname)
+   // res.sendFile(__dirname)
+   res.status(200).json({Server:"Working..",dirName : __dirname})
 })
 app.use('/api/v1/shoppingCart', shoppingCartRouter)
 
